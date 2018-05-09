@@ -230,7 +230,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ranyingxia.github.io/blog/blog/2018/05/09/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://ranyingxia.github.io/blog/blog/2018/05/antd的Upload组件实现图片上传/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yingxia">
@@ -249,7 +249,255 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/05/09/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/blog/2018/05/antd的Upload组件实现图片上传/" itemprop="url">antd的Upload组件实现图片上传</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-09T17:54:54+08:00">
+                2018-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h1><p>利用antd的Upload组件，封装自定义组件 ImageUpload，实现如下功能：</p>
+<ul>
+<li>图片上传前，验证图片的格式、长、宽、大小，限制最大上传张数。</li>
+<li>图片上传成功后，可预览、删除。</li>
+<li>图片上传成功后，支持拖拽排序。</li>
+</ul>
+<h1 id="自定义组件-ImageUpload-源码。"><a href="#自定义组件-ImageUpload-源码。" class="headerlink" title="自定义组件 ImageUpload 源码。"></a>自定义组件 ImageUpload 源码。</h1><h1 id="ImageUpload-的使用及注意事项"><a href="#ImageUpload-的使用及注意事项" class="headerlink" title="ImageUpload 的使用及注意事项"></a>ImageUpload 的使用及注意事项</h1><h2 id="在antd的Form-create创建的表单中使用-ImageUpload"><a href="#在antd的Form-create创建的表单中使用-ImageUpload" class="headerlink" title="在antd的Form.create创建的表单中使用 ImageUpload"></a>在antd的Form.create创建的表单中使用 ImageUpload</h2><h2 id="正常使用-ImageUpload。"><a href="#正常使用-ImageUpload。" class="headerlink" title="正常使用 ImageUpload。"></a>正常使用 ImageUpload。</h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ranyingxia.github.io/blog/blog/2018/05/antd采坑记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yingxia">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ranyingxia">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/05/antd采坑记录/" itemprop="url">antd采坑记录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-09T17:36:09+08:00">
+                2018-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="antd的Form-create创建表单后，通过ref拿不到子组件的属性。"><a href="#antd的Form-create创建表单后，通过ref拿不到子组件的属性。" class="headerlink" title="antd的Form.create创建表单后，通过ref拿不到子组件的属性。"></a>antd的Form.create创建表单后，通过ref拿不到子组件的属性。</h1><ul>
+<li>问题描述：</li>
+<li>解决办法</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ranyingxia.github.io/blog/blog/2018/05/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yingxia">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ranyingxia">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2018/05/hello-world/" itemprop="url">Hello World</a></h1>
         
 
         <div class="post-meta">
@@ -395,7 +643,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -403,6 +651,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
