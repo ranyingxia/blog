@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="实现功能利用antd的Upload组件，封装自定义组件 ImageUpload，实现如下功能：  图片上传前，验证图片的格式、长、宽、大小，限制最大上传张数。 图片上传成功后，可预览、删除。 图片上传成功后，支持拖拽排序。  自定义组件 ImageUpload 源码。ImageUpload 的使用及注意事项在antd的Form.create创建的表单中使用 ImageUpload正常使用 Imag">
+<meta name="description" content="一、实现功能利用antd的Upload组件，封装自定义组件 ImageUpload，实现如下功能：  图片上传前，验证图片的格式、长、宽、大小，限制最大上传张数。 图片上传成功后，可预览、删除。 图片上传成功后，支持拖拽排序。  二、自定义组件 ImageUpload 源码。三、ImageUpload 的使用及注意事项 在antd的Form.create创建的表单中使用 ImageUpload 正">
 <meta name="keywords" content="antd">
 <meta property="og:type" content="article">
 <meta property="og:title" content="antd的Upload组件实现图片上传">
 <meta property="og:url" content="https://ranyingxia.github.io/blog/2018/05/antd的Upload组件实现图片上传/index.html">
 <meta property="og:site_name" content="ranyingxia">
-<meta property="og:description" content="实现功能利用antd的Upload组件，封装自定义组件 ImageUpload，实现如下功能：  图片上传前，验证图片的格式、长、宽、大小，限制最大上传张数。 图片上传成功后，可预览、删除。 图片上传成功后，支持拖拽排序。  自定义组件 ImageUpload 源码。ImageUpload 的使用及注意事项在antd的Form.create创建的表单中使用 ImageUpload正常使用 Imag">
+<meta property="og:description" content="一、实现功能利用antd的Upload组件，封装自定义组件 ImageUpload，实现如下功能：  图片上传前，验证图片的格式、长、宽、大小，限制最大上传张数。 图片上传成功后，可预览、删除。 图片上传成功后，支持拖拽排序。  二、自定义组件 ImageUpload 源码。三、ImageUpload 的使用及注意事项 在antd的Form.create创建的表单中使用 ImageUpload 正">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-09T10:09:56.541Z">
+<meta property="og:updated_time" content="2018-05-09T10:18:00.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="antd的Upload组件实现图片上传">
-<meta name="twitter:description" content="实现功能利用antd的Upload组件，封装自定义组件 ImageUpload，实现如下功能：  图片上传前，验证图片的格式、长、宽、大小，限制最大上传张数。 图片上传成功后，可预览、删除。 图片上传成功后，支持拖拽排序。  自定义组件 ImageUpload 源码。ImageUpload 的使用及注意事项在antd的Form.create创建的表单中使用 ImageUpload正常使用 Imag">
+<meta name="twitter:description" content="一、实现功能利用antd的Upload组件，封装自定义组件 ImageUpload，实现如下功能：  图片上传前，验证图片的格式、长、宽、大小，限制最大上传张数。 图片上传成功后，可预览、删除。 图片上传成功后，支持拖拽排序。  二、自定义组件 ImageUpload 源码。三、ImageUpload 的使用及注意事项 在antd的Form.create创建的表单中使用 ImageUpload 正">
 
 
 
@@ -191,6 +191,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/blog/archives/" rel="section">
             
@@ -238,7 +248,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yingxia">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/blog/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -300,13 +310,17 @@
       
 
       
-        <h1 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h1><p>利用antd的Upload组件，封装自定义组件 ImageUpload，实现如下功能：</p>
+        <h2 id="一、实现功能"><a href="#一、实现功能" class="headerlink" title="一、实现功能"></a>一、实现功能</h2><p>利用antd的Upload组件，封装自定义组件 ImageUpload，实现如下功能：</p>
 <ul>
 <li>图片上传前，验证图片的格式、长、宽、大小，限制最大上传张数。</li>
 <li>图片上传成功后，可预览、删除。</li>
 <li>图片上传成功后，支持拖拽排序。</li>
 </ul>
-<h1 id="自定义组件-ImageUpload-源码。"><a href="#自定义组件-ImageUpload-源码。" class="headerlink" title="自定义组件 ImageUpload 源码。"></a>自定义组件 ImageUpload 源码。</h1><h1 id="ImageUpload-的使用及注意事项"><a href="#ImageUpload-的使用及注意事项" class="headerlink" title="ImageUpload 的使用及注意事项"></a>ImageUpload 的使用及注意事项</h1><h2 id="在antd的Form-create创建的表单中使用-ImageUpload"><a href="#在antd的Form-create创建的表单中使用-ImageUpload" class="headerlink" title="在antd的Form.create创建的表单中使用 ImageUpload"></a>在antd的Form.create创建的表单中使用 ImageUpload</h2><h2 id="正常使用-ImageUpload。"><a href="#正常使用-ImageUpload。" class="headerlink" title="正常使用 ImageUpload。"></a>正常使用 ImageUpload。</h2>
+<h2 id="二、自定义组件-ImageUpload-源码。"><a href="#二、自定义组件-ImageUpload-源码。" class="headerlink" title="二、自定义组件 ImageUpload 源码。"></a>二、自定义组件 ImageUpload 源码。</h2><h2 id="三、ImageUpload-的使用及注意事项"><a href="#三、ImageUpload-的使用及注意事项" class="headerlink" title="三、ImageUpload 的使用及注意事项"></a>三、ImageUpload 的使用及注意事项</h2><ul>
+<li>在antd的Form.create创建的表单中使用 ImageUpload</li>
+<li>正常使用 ImageUpload。</li>
+</ul>
+
       
     </div>
     
@@ -411,7 +425,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="/blog/images/avatar.gif"
+                src="/blog/images/avatar.png"
                 alt="yingxia" />
             
               <p class="site-author-name" itemprop="name">yingxia</p>
@@ -425,7 +439,7 @@
               
                 <a href="/blog/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -487,7 +501,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#实现功能"><span class="nav-number">1.</span> <span class="nav-text">实现功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义组件-ImageUpload-源码。"><span class="nav-number">2.</span> <span class="nav-text">自定义组件 ImageUpload 源码。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ImageUpload-的使用及注意事项"><span class="nav-number">3.</span> <span class="nav-text">ImageUpload 的使用及注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在antd的Form-create创建的表单中使用-ImageUpload"><span class="nav-number">3.1.</span> <span class="nav-text">在antd的Form.create创建的表单中使用 ImageUpload</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正常使用-ImageUpload。"><span class="nav-number">3.2.</span> <span class="nav-text">正常使用 ImageUpload。</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、实现功能"><span class="nav-number">1.</span> <span class="nav-text">一、实现功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、自定义组件-ImageUpload-源码。"><span class="nav-number">2.</span> <span class="nav-text">二、自定义组件 ImageUpload 源码。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、ImageUpload-的使用及注意事项"><span class="nav-number">3.</span> <span class="nav-text">三、ImageUpload 的使用及注意事项</span></a></li></ol></div>
             
 
           </div>
