@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="###MobX api使用详解MobX api在使用过程中的基本意识，链接Mobx使用详解 ###MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应正确理解：MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应, 链接：https://blog.souche.com/mobxbang-ding-guo-cheng/ ###如何自己实现一个 Mbox如何自己实现一个 mobx">
+<meta name="description" content="MobX api使用详解MobX api在使用过程中的基本意识，链接Mobx使用详解 MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应正确理解：MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应, 链接：https://blog.souche.com/mobxbang-ding-guo-cheng/ 如何自己实现一个 Mbox如何自己实现一个 mobx - 原理解析">
 <meta name="keywords" content="mobx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mobx知识点碎片">
 <meta property="og:url" content="https://ranyingxia.github.io/blog/2018/06/mobx知识点碎片/index.html">
 <meta property="og:site_name" content="ranyingxia">
-<meta property="og:description" content="###MobX api使用详解MobX api在使用过程中的基本意识，链接Mobx使用详解 ###MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应正确理解：MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应, 链接：https://blog.souche.com/mobxbang-ding-guo-cheng/ ###如何自己实现一个 Mbox如何自己实现一个 mobx">
+<meta property="og:description" content="MobX api使用详解MobX api在使用过程中的基本意识，链接Mobx使用详解 MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应正确理解：MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应, 链接：https://blog.souche.com/mobxbang-ding-guo-cheng/ 如何自己实现一个 Mbox如何自己实现一个 mobx - 原理解析">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-20T06:34:14.201Z">
+<meta property="og:updated_time" content="2018-06-20T06:36:29.296Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mobx知识点碎片">
-<meta name="twitter:description" content="###MobX api使用详解MobX api在使用过程中的基本意识，链接Mobx使用详解 ###MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应正确理解：MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应, 链接：https://blog.souche.com/mobxbang-ding-guo-cheng/ ###如何自己实现一个 Mbox如何自己实现一个 mobx">
+<meta name="twitter:description" content="MobX api使用详解MobX api在使用过程中的基本意识，链接Mobx使用详解 MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应正确理解：MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应, 链接：https://blog.souche.com/mobxbang-ding-guo-cheng/ 如何自己实现一个 Mbox如何自己实现一个 mobx - 原理解析">
 
 
 
@@ -342,9 +342,9 @@
       
 
       
-        <p>###MobX api使用详解<br>MobX api在使用过程中的基本意识，链接<a href="https://www.jianshu.com/p/505d9d9fe36a" target="_blank" rel="noopener">Mobx使用详解</a></p>
-<p>###MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应<br>正确理解：MobX 会对在<strong>追踪函数</strong>执行过程中<strong>读取</strong>现存的可观察属性做出<strong>反应</strong>, 链接：<a href="https://blog.souche.com/mobxbang-ding-guo-cheng/" target="_blank" rel="noopener">https://blog.souche.com/mobxbang-ding-guo-cheng/</a></p>
-<p>###如何自己实现一个 Mbox<br><a href="https://blog.souche.com/ru-he-zi-ji-shi-xian-yi-ge-mobx/" target="_blank" rel="noopener">如何自己实现一个 mobx - 原理解析</a></p>
+        <h3 id="MobX-api使用详解"><a href="#MobX-api使用详解" class="headerlink" title="MobX api使用详解"></a>MobX api使用详解</h3><p>MobX api在使用过程中的基本意识，链接<a href="https://www.jianshu.com/p/505d9d9fe36a" target="_blank" rel="noopener">Mobx使用详解</a></p>
+<h3 id="MobX-会对在追踪函数执行过程中读取现存的可观察属性做出反应"><a href="#MobX-会对在追踪函数执行过程中读取现存的可观察属性做出反应" class="headerlink" title="MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应"></a>MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应</h3><p>正确理解：MobX 会对在<strong>追踪函数</strong>执行过程中<strong>读取</strong>现存的可观察属性做出<strong>反应</strong>, 链接：<a href="https://blog.souche.com/mobxbang-ding-guo-cheng/" target="_blank" rel="noopener">https://blog.souche.com/mobxbang-ding-guo-cheng/</a></p>
+<h3 id="如何自己实现一个-Mbox"><a href="#如何自己实现一个-Mbox" class="headerlink" title="如何自己实现一个 Mbox"></a>如何自己实现一个 Mbox</h3><p><a href="https://blog.souche.com/ru-he-zi-ji-shi-xian-yi-ge-mobx/" target="_blank" rel="noopener">如何自己实现一个 mobx - 原理解析</a></p>
 
       
     </div>
@@ -435,8 +435,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -516,6 +525,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#MobX-api使用详解"><span class="nav-number">1.</span> <span class="nav-text">MobX api使用详解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MobX-会对在追踪函数执行过程中读取现存的可观察属性做出反应"><span class="nav-number">2.</span> <span class="nav-text">MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何自己实现一个-Mbox"><span class="nav-number">3.</span> <span class="nav-text">如何自己实现一个 Mbox</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
