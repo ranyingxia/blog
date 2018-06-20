@@ -343,10 +343,20 @@
       
         
           
-            <h3 id="1-MobX-api使用详解"><a href="#1-MobX-api使用详解" class="headerlink" title="1.MobX api使用详解"></a>1.MobX api使用详解</h3><p>MobX api在使用过程中的基本意识，链接<a href="https://www.jianshu.com/p/505d9d9fe36a" target="_blank" rel="noopener">Mobx使用详解</a></p>
+            <!-- TOC -->
+<ul>
+<li><a href="#1mobx-api使用详解">1.MobX api使用详解</a></li>
+<li><a href="#2mobx-会对在追踪函数执行过程中读取现存的可观察属性做出反应">2.MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应</a></li>
+<li><a href="#3mobx-会对什么作出反应">3.MobX 会对什么作出反应?</a></li>
+<li><a href="#4如何自己实现一个-mbox">4.如何自己实现一个 Mbox</a></li>
+<li><a href="#5mobx中computed和自定义get函数的区别">5.MobX中@computed和自定义get函数的区别</a></li>
+</ul>
+<!-- /TOC -->
+<h3 id="1-MobX-api使用详解"><a href="#1-MobX-api使用详解" class="headerlink" title="1.MobX api使用详解"></a>1.MobX api使用详解</h3><p>MobX api在使用过程中的基本意识，链接<a href="https://www.jianshu.com/p/505d9d9fe36a" target="_blank" rel="noopener">Mobx使用详解</a></p>
 <h3 id="2-MobX-会对在追踪函数执行过程中读取现存的可观察属性做出反应"><a href="#2-MobX-会对在追踪函数执行过程中读取现存的可观察属性做出反应" class="headerlink" title="2.MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应"></a>2.MobX 会对在追踪函数执行过程中读取现存的可观察属性做出反应</h3><p>正确理解：MobX 会对在<strong>追踪函数</strong>执行过程中<strong>读取</strong>现存的可观察属性做出<strong>反应</strong>, 链接：<a href="https://blog.souche.com/mobxbang-ding-guo-cheng/" target="_blank" rel="noopener">https://blog.souche.com/mobxbang-ding-guo-cheng/</a></p>
-<h3 id="3-如何自己实现一个-Mbox"><a href="#3-如何自己实现一个-Mbox" class="headerlink" title="3.如何自己实现一个 Mbox"></a>3.如何自己实现一个 Mbox</h3><p><a href="https://blog.souche.com/ru-he-zi-ji-shi-xian-yi-ge-mobx/" target="_blank" rel="noopener">如何自己实现一个 mobx - 原理解析</a></p>
-<h3 id="4-MobX中-computed和自定义get函数的区别"><a href="#4-MobX中-computed和自定义get函数的区别" class="headerlink" title="4.MobX中@computed和自定义get函数的区别"></a>4.MobX中@computed和自定义get函数的区别</h3><p>首先这两者解决方法都会得到一个相同的结果，但使用@computed的意义在于它能够由MobX进行更智能的优化。<br>直接使用自定义的getTheValue函数的话，那么只要value改变，所有用到getTheValue函数的地方都将重新计算。<br>使用@computed get getValue，那么getValue将会被缓存，如果value没有改变，那么getValue也不会改变，其它组件也不会收到通知。<br><a href="https://github.com/mobxjs/mobx/issues/161" target="_blank" rel="noopener">What’s difference between @computed decorator and getter function</a></p>
+<h3 id="3-MobX-会对什么作出反应"><a href="#3-MobX-会对什么作出反应" class="headerlink" title="3.MobX 会对什么作出反应?"></a>3.MobX 会对什么作出反应?</h3><p><a href="https://cn.mobx.js.org/best/react.html" target="_blank" rel="noopener">MobX 会对什么作出反应?</a></p>
+<h3 id="4-如何自己实现一个-Mbox"><a href="#4-如何自己实现一个-Mbox" class="headerlink" title="4.如何自己实现一个 Mbox"></a>4.如何自己实现一个 Mbox</h3><p><a href="https://blog.souche.com/ru-he-zi-ji-shi-xian-yi-ge-mobx/" target="_blank" rel="noopener">如何自己实现一个 mobx - 原理解析</a></p>
+<h3 id="5-MobX中-computed和自定义get函数的区别"><a href="#5-MobX中-computed和自定义get函数的区别" class="headerlink" title="5.MobX中@computed和自定义get函数的区别"></a>5.MobX中@computed和自定义get函数的区别</h3><p>首先这两者解决方法都会得到一个相同的结果，但使用@computed的意义在于它能够由MobX进行更智能的优化。<br>直接使用自定义的getTheValue函数的话，那么只要value改变，所有用到getTheValue函数的地方都将重新计算。<br>使用@computed get getValue，那么getValue将会被缓存，如果value没有改变，那么getValue也不会改变，其它组件也不会收到通知。<br><a href="https://github.com/mobxjs/mobx/issues/161" target="_blank" rel="noopener">What’s difference between @computed decorator and getter function</a></p>
 
           
         
